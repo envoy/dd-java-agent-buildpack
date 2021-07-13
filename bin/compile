@@ -10,8 +10,13 @@ cacheDir=$(cd "$2/" && pwd)
 envDir=$(cd "$3/" && pwd)
 
 main() {
+    makeNewDirectories
     downloadDatadogJavaAgent
     moveArtifacts
+}
+
+makeNewDirectories() {
+    mkdir -p agent
 }
 
 downloadDatadogJavaAgent() {
