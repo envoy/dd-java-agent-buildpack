@@ -15,11 +15,11 @@ main() {
 }
 
 downloadJavaAgent() {
-    wget --progress=bar:force:noscroll -O agents/dd-java-agent.jar https://dtdg.co/latest-java-tracer
+    wget --progress=bar:force:noscroll -O agent/dd-java-agent.jar https://dtdg.co/latest-java-tracer
 }
 
 moveArtifacts() {
-    mv -v agents $buildDir
+    mv -v agent $buildDir
 }
 
 main
