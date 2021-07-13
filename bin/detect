@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+echo "Datadog Java Agent Buildpack"
+exit 0

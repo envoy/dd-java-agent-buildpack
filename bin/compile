@@ -1,0 +1,25 @@
+#!/bin/bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+set -e
+
+workingDir=$(pwd)
+mkdir -p "$2"
+buildDir=$(cd "$1/" && pwd)
+cacheDir=$(cd "$2/" && pwd)
+envDir=$(cd "$3/" && pwd)
+
+main() {
+    downloadDatadogJavaAgent
+    moveArtifacts
+}
+
+downloadJavaAgent() {
+    wget --progress=bar:force:noscroll -O agents/dd-java-agent.jar https://dtdg.co/latest-java-tracer
+}
+
+moveArtifacts() {
+    mv -v agents $buildDir
+}
+
+main
