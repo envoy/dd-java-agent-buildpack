@@ -14,7 +14,7 @@ main() {
     moveArtifacts
 }
 
-downloadJavaAgent() {
+downloadDatadogJavaAgent() {
     wget --progress=bar:force:noscroll -O agent/dd-java-agent.jar https://dtdg.co/latest-java-tracer
 }
 
